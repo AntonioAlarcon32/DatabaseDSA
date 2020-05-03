@@ -28,10 +28,11 @@ public class UserDaoImp  implements UserDAO{
     @Override
     public User getUser(String id) {
         Session session = null;
-        User user = null;
+        User user = new User();
         try {
             session = FactorySession.openSession();
-            user = (User)session.get(User.class, id);
+            session.get(User.class,id);
+
         }
         catch (Exception e) {
             // LOG
@@ -39,7 +40,6 @@ public class UserDaoImp  implements UserDAO{
         finally {
             session.close();
         }
-
         return user;
     }
 

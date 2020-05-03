@@ -1,5 +1,7 @@
 package dsa.grupo2.util;
 
+import java.lang.reflect.Field;
+
 public class QueryHelper {
 
     public static String createQueryINSERT(Object entity) {
@@ -37,11 +39,22 @@ public class QueryHelper {
         return sb.toString();
     }
 
-    public static String createQuerySELECT(Object entity) {
+    public static String createQuerySELECT(Class cl) {
         StringBuffer sb = new StringBuffer();
-        sb.append("SELECT * FROM ").append(entity.getClass().getSimpleName());
+        sb.append("SELECT ");
+        Field[] fields = cl.getDeclaredFields();
+        boolean first = true;
+        for (Field field : fields) {
+            if (first) {
+                sb.append(field.getName());
+                first = false;
+            }
+            else {
+                sb.append(",").append(field.getName());
+            }
+        }
+        sb.append(" FROM ").append(cl.getSimpleName());
         sb.append(" WHERE ID = ?");
-
         return sb.toString();
     }
 

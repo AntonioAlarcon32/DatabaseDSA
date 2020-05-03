@@ -26,9 +26,10 @@ public class ObjectHelper {
         String objectName = object.getClass().getName();
         String method = "set" + property.substring(0, 1).toUpperCase() + property.substring(1);;
         Object result = null;
+        Integer integer  = new Integer(0);
         try {
             Class c = Class.forName(objectName);
-            Method m = c.getDeclaredMethod(method);
+            Method m = c.getDeclaredMethod(method, value.getClass());
             result = m.invoke(object,value);
         }
         catch (Exception e) {

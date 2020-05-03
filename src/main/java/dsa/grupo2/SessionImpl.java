@@ -2,10 +2,7 @@ package dsa.grupo2;
 
 import dsa.grupo2.util.*;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.HashMap;
 import java.util.List;
 
@@ -50,30 +47,23 @@ public class SessionImpl implements Session {
 
         try {
             pstm = conn.prepareStatement(getQuery);
-
+            o = theClass.getDeclaredConstructor().newInstance();
             pstm.setObject(1, id);
 
             ResultSet rs = pstm.executeQuery();
+            ResultSetMetaData data = rs.getMetaData();
+            rs.next();
+            for (int i = 1; i <= data.getColumnCount(); i++) {
+                String columnName = data.getColumnName(i);
+                ObjectHelper.setter(o,columnName,rs.getObject(i));
+            }
 
-            try {
 
-                o = theClass.getDeclaredConstructor().newInstance();
-                while (rs.next()) {
-                    for (String field : ObjectHelper.getFields(theClass)) ;
-                    {
-                        //ObjectHelper.setter(o,field,rs);
-
-                    }
-
-                }
             }
             catch (Exception e) {
                 e.printStackTrace();
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
         return o;
     }
 

@@ -20,13 +20,14 @@ public class Test {
     @org.junit.Test
     public void testDAOadd() {
         UserDaoImp db = new UserDaoImp();
-        db.addUser("jose","jose.verdu@estudiant.upc.edu","proyecto");
+        db.addUser("carlos","carlos.hermoso@estudiant.upc.edu","proyecto");
     }
 
     @org.junit.Test
     public void testDaoGet() {
         UserDaoImp db = new UserDaoImp();
         db.getUser("jp34jmza");
+        
     }
 
 

@@ -1,2 +1,8 @@
-/Users/antonioalarcon/Downloads/DAOProyecto/src/main/java/dsa/grupo2/models/User.java
-/Users/antonioalarcon/Downloads/DAOProyecto/src/main/java/dsa/grupo2/UserDAO.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/util/QueryHelper.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/models/User.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/util/ObjectHelper.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/UserDaoImp.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/Session.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/UserDAO.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/SessionImpl.java
+/Users/antonioalarcon/Desktop/DSA/Proyecto/DAOProyecto/src/main/java/dsa/grupo2/FactorySession.java
