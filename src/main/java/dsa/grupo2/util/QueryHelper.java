@@ -11,10 +11,11 @@ public class QueryHelper {
         sb.append("(");
 
         String [] fields = ObjectHelper.getFields(entity);
-
+        boolean first = true;
         for (String field: fields) {
-            if (field == "id") {
+            if (first) {
                 sb.append(field);
+                first = false;
             }
             else {
                 sb.append(", ").append(field);
@@ -22,7 +23,8 @@ public class QueryHelper {
         }
 
         sb.append(") VALUES (");
-        boolean first = true;
+
+        first = true;
 
         for (String field: fields) {
             if (first) {
@@ -55,6 +57,26 @@ public class QueryHelper {
         }
         sb.append(" FROM ").append(cl.getSimpleName());
         sb.append(" WHERE ID = ?");
+        return sb.toString();
+    }
+
+    public static String createQueryUPDATE(Object entity) {
+        StringBuffer sb = new StringBuffer("UPDATE ");
+        sb.append(entity.getClass().getSimpleName()).append(" ");
+        sb.append("SET ");
+        String[] fields = ObjectHelper.getFields(entity);
+        boolean first = true;
+        for (String field : fields) {
+            if (first) {
+                sb.append(field);
+                sb.append("=?");
+                first = false;
+            } else {
+                sb.append(", ").append(field).append("=? ");
+            }
+        }
+        sb.append("WHERE ID = ?");
+
         return sb.toString();
     }
 

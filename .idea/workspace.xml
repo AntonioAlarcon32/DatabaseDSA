@@ -2,26 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27e60474-27c3-446e-83d4-cc30957dceab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAOProyecto.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/SessionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/SessionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/UserDaoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/util/ObjectHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/util/ObjectHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/util/QueryHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/util/QueryHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/Session.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/SessionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/SessionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/UserDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/UserDaoImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/util/ObjectHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/util/ObjectHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/util/QueryHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/util/QueryHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,38 +126,38 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="451" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1588185397727" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1588526071958">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1588550473974">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071958" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1588526071957">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473974" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1588550473973">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071957" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1588526071956">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473973" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1588550473972">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071956" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1588526071958">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473972" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1588550473973">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071958" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1588526071948">
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473973" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1588550473967">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071948" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1588526071946">
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473967" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1588550473966">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071946" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1588526071946">
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473966" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1588550473966">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071946" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1588526071947">
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473966" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1588550473967">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588526071947" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588550473967" />
     <state x="341" y="164" key="SettingsEditor" timestamp="1588445219152">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -180,19 +175,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dsa/grupo2/SessionImpl.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/src/main/java/dsa/grupo2/util/QueryHelper.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dsa/grupo2/SessionImpl.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="57" />
+          <line>79</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dsa/grupo2/util/ObjectHelper.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/src/main/java/dsa/grupo2/SessionImpl.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

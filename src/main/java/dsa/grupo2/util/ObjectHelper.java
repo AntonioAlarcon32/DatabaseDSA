@@ -29,7 +29,17 @@ public class ObjectHelper {
         Integer integer  = new Integer(0);
         try {
             Class c = Class.forName(objectName);
-            Method m = c.getDeclaredMethod(method, value.getClass());
+            Class param = null;
+
+            if (value instanceof  Integer)
+                param = int.class;
+
+            else if (value instanceof java.sql.Date)
+                param = java.util.Date.class;
+
+            else
+                param = String.class;
+            Method m = c.getDeclaredMethod(method, param);
             result = m.invoke(object,value);
         }
         catch (Exception e) {

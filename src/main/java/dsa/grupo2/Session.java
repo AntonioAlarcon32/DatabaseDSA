@@ -7,7 +7,7 @@ public interface Session<E> {
     void save(Object entity);
     void close();
     Object get(Class theClass, String id);
-    void update(Object object);
+    void update(Object newObject, String id);
     void delete(Object object);
     List<Object> findAll(Class theClass);
     List<Object> findAll(Class theClass, HashMap params);

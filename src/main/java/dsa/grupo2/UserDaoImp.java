@@ -31,11 +31,10 @@ public class UserDaoImp  implements UserDAO{
         User user = new User();
         try {
             session = FactorySession.openSession();
-            session.get(User.class,id);
-
+            user= (User)session.get(User.class,id);
         }
         catch (Exception e) {
-            // LOG
+
         }
         finally {
             session.close();
@@ -44,8 +43,25 @@ public class UserDaoImp  implements UserDAO{
     }
 
     @Override
-    public void updateUser(String newName, String newEmail, String newPassword) {
+    public void updateUser(String newName, String newEmail, String newPassword, String id) {
+        Session session = null;
+        User user = new User();
 
+        try {
+            session = FactorySession.openSession();
+            user = (User)session.get(User.class,id);
+
+            User newUser = new User(newName, newEmail, newPassword );
+            newUser.setId(id);
+            newUser.setExp(user.getExp());
+            session.update(newUser,id);
+        }
+        catch (Exception e) {
+
+        }
+        finally {
+            session.close();
+        }
     }
 
     @Override

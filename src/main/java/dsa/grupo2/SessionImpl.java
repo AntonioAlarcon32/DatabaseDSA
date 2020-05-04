@@ -46,28 +46,43 @@ public class SessionImpl implements Session {
         PreparedStatement pstm = null;
 
         try {
-            pstm = conn.prepareStatement(getQuery);
-            o = theClass.getDeclaredConstructor().newInstance();
-            pstm.setObject(1, id);
+                pstm = conn.prepareStatement(getQuery);
+                o = theClass.getDeclaredConstructor().newInstance();
+                pstm.setObject(1, id);
 
-            ResultSet rs = pstm.executeQuery();
-            ResultSetMetaData data = rs.getMetaData();
-            rs.next();
-            for (int i = 1; i <= data.getColumnCount(); i++) {
-                String columnName = data.getColumnName(i);
-                ObjectHelper.setter(o,columnName,rs.getObject(i));
-            }
-
-
+                ResultSet rs = pstm.executeQuery();
+                ResultSetMetaData data = rs.getMetaData();
+                rs.next();
+                for (int i = 1; i <= data.getColumnCount(); i++) {
+                    String columnName = data.getColumnName(i);
+                    ObjectHelper.setter(o,columnName,rs.getObject(i));
+                }
             }
             catch (Exception e) {
-                e.printStackTrace();
+                return null;
             }
-
         return o;
     }
 
-    public void update(Object object) {
+    public void update(Object newObject, String id) {
+        String updateQuery = QueryHelper.createQueryUPDATE(newObject);
+
+        PreparedStatement pstm = null;
+
+        try {
+            pstm = conn.prepareStatement(updateQuery);
+            int i = 1;
+
+            for (String field: ObjectHelper.getFields(newObject)) {
+                pstm.setObject(i++, ObjectHelper.getter(newObject, field));
+            }
+
+            pstm.setObject(i,ObjectHelper.getter(newObject,"id"));
+            pstm.executeQuery();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
