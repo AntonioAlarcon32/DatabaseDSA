@@ -1,6 +1,6 @@
 package dsa.grupo2;
 
-import dsa.grupo2.models.User;
+import dsa.grupo2.models.*;
 
 public class UserDaoImp  implements UserDAO{
 
@@ -26,12 +26,12 @@ public class UserDaoImp  implements UserDAO{
     }
 
     @Override
-    public User getUser(String id) {
+    public User getUser(String searchField, String value) {
         Session session = null;
         User user = new User();
         try {
             session = FactorySession.openSession();
-            user= (User)session.get(User.class,id);
+            user= (User)session.get(User.class,searchField, value);
         }
         catch (Exception e) {
 
@@ -49,7 +49,7 @@ public class UserDaoImp  implements UserDAO{
 
         try {
             session = FactorySession.openSession();
-            user = (User)session.get(User.class,id);
+            user = (User)session.get(User.class, "ID" , id);
 
             User newUser = new User(newName, newEmail, newPassword );
             newUser.setId(id);
@@ -64,8 +64,37 @@ public class UserDaoImp  implements UserDAO{
         }
     }
 
+
+
+    @Override
+    public User getUserByName(String name) {
+        Session session = null;
+        User user = new User();
+        try {
+            session = FactorySession.openSession();
+            user= (User)session.get(User.class,"name", name);
+        }
+        catch (Exception e) {
+
+        }
+        finally {
+            session.close();
+        }
+        return user;
+    }
+
     @Override
     public boolean checkLogin(String name, String password) {
+        try {
+            User  u = this.getUserByName(name);
+            if (u.getPassword().equals(password))
+                return true;
+            else
+                return false;
+        }
+        catch (Exception e) {
+
+        }
         return false;
     }
 }

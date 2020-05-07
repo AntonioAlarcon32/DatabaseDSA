@@ -40,15 +40,15 @@ public class SessionImpl implements Session {
 
     }
 
-    public Object get(Class theClass, String id) {
-        String getQuery = QueryHelper.createQuerySELECT(theClass);
+    public Object get(Class theClass, String searchField, String value) {
+        String getQuery = QueryHelper.createQuerySELECT(theClass, searchField);
         Object o = null;
         PreparedStatement pstm = null;
 
         try {
                 pstm = conn.prepareStatement(getQuery);
                 o = theClass.getDeclaredConstructor().newInstance();
-                pstm.setObject(1, id);
+                pstm.setObject(1, value);
 
                 ResultSet rs = pstm.executeQuery();
                 ResultSetMetaData data = rs.getMetaData();

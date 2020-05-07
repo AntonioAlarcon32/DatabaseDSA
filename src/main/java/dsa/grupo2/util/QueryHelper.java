@@ -41,7 +41,7 @@ public class QueryHelper {
         return sb.toString();
     }
 
-    public static String createQuerySELECT(Class cl) {
+    public static String createQuerySELECT(Class cl, String searchField) {
         StringBuffer sb = new StringBuffer();
         sb.append("SELECT ");
         Field[] fields = cl.getDeclaredFields();
@@ -56,7 +56,7 @@ public class QueryHelper {
             }
         }
         sb.append(" FROM ").append(cl.getSimpleName());
-        sb.append(" WHERE ID = ?");
+        sb.append(" WHERE ").append(searchField).append("= ?");
         return sb.toString();
     }
 
