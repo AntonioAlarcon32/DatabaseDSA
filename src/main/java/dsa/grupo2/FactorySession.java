@@ -38,13 +38,28 @@ public class FactorySession {
             FileInputStream fstream = new FileInputStream(propFileName);
             properties.load(fstream);
             fstream.close();
+            if (properties.getProperty("enserver").equals("false")){
 
-            vusename = properties.getProperty("usename");
-            vport = properties.getProperty("port");
-            vpassword = properties.getProperty("password");
-            vdatabase = properties.getProperty("database");
-            vdbclient = properties.getProperty("dbclient");
-            vhost = properties.getProperty("host");
+
+
+                vusename = properties.getProperty("usename");
+                vport = properties.getProperty("port");
+                vpassword = properties.getProperty("password");
+                vdatabase = properties.getProperty("database");
+                vdbclient = properties.getProperty("dbclient");
+                vhost = properties.getProperty("host");
+            }else {
+
+                vusename = properties.getProperty("susename");
+                vport = properties.getProperty("sport");
+                vpassword = properties.getProperty("spassword");
+                vdatabase = properties.getProperty("sdatabase");
+                vdbclient = properties.getProperty("sdbclient");
+                vhost = properties.getProperty("shost");
+
+
+            }
+
 
             result[0] = vdbclient+"://"+vhost+":"+vport+"/"+vdatabase;
             result[1] = vusename;
