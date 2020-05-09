@@ -20,8 +20,44 @@ public class FactorySession {
         return session;
     }
 
+    public static String getPropValues(){
+
+        Properties properties = new Properties();
+        String propFileName = "src/main/resources/conexion.properties";
+
+        String vusename = new String();
+        String vpassword = new String();
+        String vdbclient = new String();
+        String vhost = new String();
+        String vport = new String();
+        String vdatabase = new String();
+
+        String result = new String();
+
+        try {
+            FileInputStream fstream = new FileInputStream(propFileName);
+            properties.load(fstream);
+            fstream.close();
+
+            vusename = properties.getProperty("usename");
+            vport = properties.getProperty("port");
+            vpassword = properties.getProperty("password");
+            vdatabase = properties.getProperty("database");
+            vdbclient = properties.getProperty("dbclient");
+            vhost = properties.getProperty("host");
 
 
+            // " jdbc:mariadb : //  localhost : 3306/DSAGame","juninho","1qaz2wsx3edc"
+            result = vdbclient+","+vhost+","+","+vhost+","+vport+","+vdatabase+","+vusename+","+vpassword;
+
+            System.out.println(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        return result;
+    }
 
 
     private static Connection getConnection() {
@@ -44,7 +80,7 @@ public class FactorySession {
             e.printStackTrace();
         }
 
-
+        System.out.println(getPropValues());
 
         try {
             conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DSAGame","juninho","1qaz2wsx3edc");
