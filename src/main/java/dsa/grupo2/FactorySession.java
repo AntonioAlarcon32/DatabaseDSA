@@ -1,9 +1,12 @@
 package dsa.grupo2;
 
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class FactorySession {
     public static Session openSession() {
@@ -20,6 +23,22 @@ public class FactorySession {
 
     private static Connection getConnection() {
         Connection conn = null;
+
+        Properties properties = new Properties();
+        String propFileName = "resources/conexion.properties";
+
+        try {
+            FileInputStream fstream = new FileInputStream(propFileName);
+            properties.load(fstream);
+            fstream.close();
+            String nome = properties.getProperty("usename");
+            System.out.println(nome);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
         try {
             conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DSAGame","juninho","1qaz2wsx3edc");
 
