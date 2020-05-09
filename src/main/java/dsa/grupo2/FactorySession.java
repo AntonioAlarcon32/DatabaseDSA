@@ -1,12 +1,13 @@
 package dsa.grupo2;
 
-
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
 
 public class FactorySession {
     public static Session openSession() {
@@ -21,18 +22,24 @@ public class FactorySession {
 
 
 
+
+
     private static Connection getConnection() {
         Connection conn = null;
 
         Properties properties = new Properties();
-        String propFileName = "resources/conexion.properties";
+        String propFileName = "src/main/resources/conexion.properties";
 
         try {
             FileInputStream fstream = new FileInputStream(propFileName);
             properties.load(fstream);
             fstream.close();
             String nome = properties.getProperty("usename");
-            System.out.println(nome);
+            String port = properties.getProperty("port");
+
+            String result = "Company List = " + nome + ", " + port + ", ";
+
+            System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
