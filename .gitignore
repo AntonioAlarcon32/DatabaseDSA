@@ -4,3 +4,4 @@
 **/._.DS_Store
 conexion.properties
 **/conexion.properties
+.idea/workspace.xml
