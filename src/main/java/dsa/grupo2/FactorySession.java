@@ -20,7 +20,7 @@ public class FactorySession {
         return session;
     }
 
-    public static String getPropValues(){
+    public static String[] getPropValues(){
 
         Properties properties = new Properties();
         String propFileName = "src/main/resources/conexion.properties";
@@ -32,7 +32,7 @@ public class FactorySession {
         String vport = new String();
         String vdatabase = new String();
 
-        String result = new String();
+        String[] result = new String[3];
 
         try {
             FileInputStream fstream = new FileInputStream(propFileName);
@@ -46,15 +46,13 @@ public class FactorySession {
             vdbclient = properties.getProperty("dbclient");
             vhost = properties.getProperty("host");
 
+            result[0] = vdbclient+"://"+vhost+":"+vport+"/"+vdatabase;
+            result[1] = vusename;
+            result[2] = vpassword;
 
-            // " jdbc:mariadb : //  localhost : 3306/DSAGame","juninho","1qaz2wsx3edc"
-            result = vdbclient+","+vhost+","+","+vhost+","+vport+","+vdatabase+","+vusename+","+vpassword;
-
-            System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         return result;
     }
@@ -63,27 +61,13 @@ public class FactorySession {
     private static Connection getConnection() {
         Connection conn = null;
 
-        Properties properties = new Properties();
-        String propFileName = "src/main/resources/conexion.properties";
+        String[] resultado=getPropValues();
 
         try {
-            FileInputStream fstream = new FileInputStream(propFileName);
-            properties.load(fstream);
-            fstream.close();
-            String nome = properties.getProperty("usename");
-            String port = properties.getProperty("port");
+            System.out.println(resultado[0]);
 
-            String result = "Company List = " + nome + ", " + port + ", ";
-
-            System.out.println(result);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(getPropValues());
-
-        try {
-            conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DSAGame","juninho","1qaz2wsx3edc");
+            //conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DSAGame","juninho","1qaz2wsx3edc");
+            conn = DriverManager.getConnection(resultado[0],resultado[1],resultado[2]);
 
         } catch (SQLException ex) {
             // handle any errors
