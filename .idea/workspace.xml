@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27e60474-27c3-446e-83d4-cc30957dceab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dsa/grupo2/FactorySession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dsa/grupo2/FactorySession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dsa/grupo2/FactorySession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dsa/grupo2/FactorySession.class" afterDir="false" />
-    </list>
+    <list default="true" id="27e60474-27c3-446e-83d4-cc30957dceab" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +39,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -118,6 +115,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="88" key="#Project_Structure" timestamp="1589035816932">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state x="320" y="88" key="#Project_Structure/0.23.1440.800@0.23.1440.800" timestamp="1589035816932" />
     <state x="100" y="100" width="1480" height="850" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1588793172514">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -138,26 +139,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="451" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1588185397727" />
-    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1589035491815">
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1589035899261">
       <screen x="0" y="23" width="1440" height="800" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1588801511218" />
-    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.800@0.23.1440.800" timestamp="1589035491815" />
-    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1589035491814">
+    <state width="1398" height="205" key="GridCell.Tab.0.bottom/0.23.1440.800@0.23.1440.800" timestamp="1589035899261" />
+    <state width="1398" height="205" key="GridCell.Tab.0.center" timestamp="1589035899261">
       <screen x="0" y="23" width="1440" height="800" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1588801511217" />
-    <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.800@0.23.1440.800" timestamp="1589035491814" />
-    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1589035491814">
+    <state width="1398" height="205" key="GridCell.Tab.0.center/0.23.1440.800@0.23.1440.800" timestamp="1589035899261" />
+    <state width="1398" height="205" key="GridCell.Tab.0.left" timestamp="1589035899260">
       <screen x="0" y="23" width="1440" height="800" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1588801511215" />
-    <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.800@0.23.1440.800" timestamp="1589035491814" />
-    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1589035491814">
+    <state width="1398" height="205" key="GridCell.Tab.0.left/0.23.1440.800@0.23.1440.800" timestamp="1589035899260" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right" timestamp="1589035899261">
       <screen x="0" y="23" width="1440" height="800" />
     </state>
     <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1588801511218" />
-    <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.800@0.23.1440.800" timestamp="1589035491814" />
+    <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.800@0.23.1440.800" timestamp="1589035899261" />
     <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1588794806657">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -186,5 +187,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="544" y="426" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1680.1050@0.0.1680.1050" timestamp="1588449423714" />
+    <state x="97" y="120" key="new project wizard" timestamp="1589035744340">
+      <screen x="0" y="23" width="1440" height="800" />
+    </state>
+    <state x="97" y="120" key="new project wizard/0.23.1440.800@0.23.1440.800" timestamp="1589035744340" />
   </component>
 </project>
