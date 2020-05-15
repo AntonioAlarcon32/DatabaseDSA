@@ -40,24 +40,20 @@ public class FactorySession {
             fstream.close();
             if (properties.getProperty("enserver").equals("false")){
 
-
-
                 vusename = properties.getProperty("usename");
                 vport = properties.getProperty("port");
                 vpassword = properties.getProperty("password");
                 vdatabase = properties.getProperty("database");
                 vdbclient = properties.getProperty("dbclient");
                 vhost = properties.getProperty("host");
-            }else {
-
+            }
+            else {
                 vusename = properties.getProperty("susename");
                 vport = properties.getProperty("sport");
                 vpassword = properties.getProperty("spassword");
                 vdatabase = properties.getProperty("sdatabase");
                 vdbclient = properties.getProperty("sdbclient");
                 vhost = properties.getProperty("shost");
-
-
             }
 
 
@@ -79,8 +75,6 @@ public class FactorySession {
         String[] resultado=getPropValues();
 
         try {
-            System.out.println(resultado[0]);
-
             //conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/DSAGame","juninho","1qaz2wsx3edc");
             conn = DriverManager.getConnection(resultado[0],resultado[1],resultado[2]);
 

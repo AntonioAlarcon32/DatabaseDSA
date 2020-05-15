@@ -1,9 +1,13 @@
 import dsa.grupo2.ItemDAOImp;
+import dsa.grupo2.SessionImpl;
+import dsa.grupo2.TokenDAOImp;
 import dsa.grupo2.UserDaoImp;
 import dsa.grupo2.models.*;
 import dsa.grupo2.util.ObjectHelper;
 import dsa.grupo2.util.QueryHelper;
 import org.junit.*;
+
+import java.util.HashMap;
 
 public class Test {
     public static User user;
@@ -53,19 +57,10 @@ public class Test {
     @org.junit.Test
     public void testLogin() {
         UserDaoImp db = new UserDaoImp();
-        Boolean goodLogin = db.checkLogin("Pep","proyecto");
-        Boolean badLogin = db.checkLogin("Antonio", "dada");
-        Boolean errorLogin = db.checkLogin("Marcos","daffa");
-        Assert.assertEquals(true, goodLogin);
-        Assert.assertEquals(false, badLogin);
-        Assert.assertEquals(false, errorLogin);
-    }
-
-    @org.junit.Test
-    public void testItemGet() {
-        ItemDAOImp db = new ItemDAOImp();
-        Item i = db.getItemById("kkkkkkkk");
-        Assert.assertEquals("mascarilla",i.getName());
+        String c = db.checkLogin("Antonio","proyecto");
+        TokenDAOImp tdb = new TokenDAOImp();
+        boolean check = tdb.checkToken(c);
+        Assert.assertEquals(true,check);
     }
 
 }

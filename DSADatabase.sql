@@ -64,3 +64,11 @@ CREATE TABLE Level_npc (
 
 );
 
+CREATE TABLE Token (
+                            id VARCHAR(255),
+                            idUser VARCHAR(255),
+                            admin VARCHAR(6),
+                            PRIMARY KEY (id),
+                            FOREIGN KEY (idUser) REFERENCES User(id)
+)
+

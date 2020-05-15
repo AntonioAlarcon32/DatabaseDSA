@@ -2,6 +2,8 @@ package dsa.grupo2;
 
 import dsa.grupo2.models.*;
 
+import java.util.HashMap;
+
 public class UserDaoImp  implements UserDAO{
 
     @Override
@@ -84,17 +86,30 @@ public class UserDaoImp  implements UserDAO{
     }
 
     @Override
-    public boolean checkLogin(String name, String password) {
+    public String checkLogin(String name, String password) {
+        Session session = null;
+        HashMap<String, String > params = new HashMap<String, String>();
+        params.put("name", name);
+        params.put("password",password);
         try {
-            User  u = this.getUserByName(name);
-            if (u.getPassword().equals(password))
-                return true;
+            session = FactorySession.openSession();
+            Integer i = session.count(User.class, params);
+            if (i == 1) {
+                User u = this.getUserByName(name);
+                TokenDAOImp td = new TokenDAOImp();
+                String tokId = td.addToken(u.getId(),"false");
+                return tokId;
+            }
             else
-                return false;
+                return "FALSE";
         }
         catch (Exception e) {
-
+            //Log
+            return null;
         }
-        return false;
+        finally {
+            session.close();
+        }
+
     }
 }

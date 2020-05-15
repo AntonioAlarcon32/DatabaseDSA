@@ -2,6 +2,7 @@ package dsa.grupo2;
 
 import dsa.grupo2.util.*;
 
+import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.List;
@@ -37,6 +38,12 @@ public class SessionImpl implements Session {
     }
 
     public void close() {
+        try {
+            conn.close();
+        }
+        catch (Exception e) {
+            //traza
+        }
 
     }
 
@@ -84,6 +91,29 @@ public class SessionImpl implements Session {
             e.printStackTrace();
         }
 
+    }
+
+    public Integer count(Class cl, HashMap params) {
+        String countQuery = QueryHelper.createQueryCOUNT(cl,params);
+        PreparedStatement pstm = null;
+
+        try {
+            pstm = conn.prepareStatement(countQuery);
+            int i = 1;
+
+            for(Field field : cl.getDeclaredFields()) {
+                if (params.containsKey(field.getName()))
+                    pstm.setObject(i++, params.get(field.getName()));
+            }
+            ResultSet rs = pstm.executeQuery();
+            rs.next();
+            Integer res = rs.getInt("COUNT(*)");
+            return res;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void delete(Object object) {

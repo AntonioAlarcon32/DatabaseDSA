@@ -1,7 +1,7 @@
-dsa/grupo2/UserDAO.class
-dsa/grupo2/FactorySession.class
-dsa/grupo2/Session.class
 dsa/grupo2/UserDaoImp.class
 dsa/grupo2/SessionImpl.class
 dsa/grupo2/util/QueryHelper.class
 dsa/grupo2/models/User.class
+dsa/grupo2/UserDAO.class
+dsa/grupo2/FactorySession.class
+dsa/grupo2/Session.class
