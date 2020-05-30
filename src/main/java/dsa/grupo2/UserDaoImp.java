@@ -45,28 +45,25 @@ public class UserDaoImp  implements UserDAO{
     }
 
     @Override
-    public void updateUser(String newName, String newEmail, String newPassword, String id) {
+    public User updateUser(String newName, String newEmail, String newPassword, String id) {
         Session session = null;
         User user = new User();
-
         try {
             session = FactorySession.openSession();
             user = (User)session.get(User.class, "ID" , id);
-
             User newUser = new User(newName, newEmail, newPassword );
             newUser.setId(id);
             newUser.setExp(user.getExp());
             session.update(newUser,id);
         }
         catch (Exception e) {
-
+            return null;
         }
         finally {
             session.close();
         }
+        return this.getUser("ID", id);
     }
-
-
 
     @Override
     public User getUserByName(String name) {

@@ -116,6 +116,8 @@ public class SessionImpl implements Session {
         return null;
     }
 
+
+
     public void delete(Object object) {
 
     }

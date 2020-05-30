@@ -57,4 +57,26 @@ public class TokenDAOImp implements TokenDAO {
         }
         return false;
     }
+    @Override
+    public boolean isAdmin(String id) {
+        Session session = null;
+        try {
+            session = FactorySession.openSession();
+            Token t = (Token) session.get(Token.class, "id", id);
+            if (t.getAdmin().equals("true")) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        catch (Exception e) {
+            // LOG
+        }
+        finally {
+            session.close();
+        }
+        return false;
+    }
 }

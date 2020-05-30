@@ -20,6 +20,10 @@ public class Token {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getIdUser() {
         return idUser;
     }

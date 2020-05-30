@@ -77,7 +77,13 @@ public class QueryHelper {
                 sb.append("=?");
                 first = false;
             } else {
-                sb.append(", ").append(field).append("=? ");
+                if (field.equals("password")) {
+                    sb.append(", ").append(field).append("=MD5(?) ");
+                }
+                else {
+                    sb.append(", ").append(field).append("=? ");
+
+                }
             }
         }
         sb.append("WHERE ID = ?");
